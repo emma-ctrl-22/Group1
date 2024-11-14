@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Room, Services, Home, Guests } from './pages'
+import { Room, Services, Home, Guests,Booking } from './pages'
 import { DefaultLayout } from "./components"
 function App() {
 
@@ -11,6 +11,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/rooms" element={<DefaultLayout><Room /></DefaultLayout>} />
+      </Routes>
+      <Routes>
+        <Route path="/bookings" element={<DefaultLayout><Booking /></DefaultLayout>} />
       </Routes>
       <Routes>
         <Route path="/services" element={<DefaultLayout><Services /></DefaultLayout>} />
