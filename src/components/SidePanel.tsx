@@ -3,11 +3,17 @@ import { FaHome } from "react-icons/fa";
 import { FaBook } from "react-icons/fa";
 import { FaBuildingCircleArrowRight } from "react-icons/fa6";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdPayments } from "react-icons/md";
+import { GrUserWorker } from "react-icons/gr";
 const navItems =[
-  {icon:<FaHome />,title:"Home",path:"/"},
+  {icon:<FaHome />,title:"Home",path:"/home"},
   {icon:<FaBook  />,title:"Bookings",path:"/bookings"},
   {icon:<FaBuildingCircleArrowRight />,title:"Room",path:"/rooms"},
-  {icon:<MdOutlineLocalLaundryService />,title:"Services",path:"/services"}
+  {icon:<MdOutlineLocalLaundryService />,title:"Services",path:"/services"},
+  {icon:<GrUserWorker />,title:"Staff",path:"/staff"},
+  {icon:<MdPayments />,title:"Payments",path:"/payments"},
+  {icon:<FaPeopleGroup />,title:"Guests",path:"/guests"}
 ]
 
 export default function SidePanel() {

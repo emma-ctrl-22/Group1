@@ -31,31 +31,31 @@ const Card = ({ icon, title, value }):CardProps => {
 
 export default function Home() {
   return (
-    <div className="flex w-full h-full flex-col p-4 items-center justify-between ">
-      <div className="w-full h-[25%] flex flex-col justify-between">
-        <div className="flex flex-row items-center justify-between">
-          <div className="flex flex-col">
-            <small>Home</small>
-            <h1>Group1 Hotel</h1>
+      <div className="flex w-full h-full flex-col p-4 items-center justify-between ">
+        <div className="w-full h-[25%] flex flex-col justify-between">
+          <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-col">
+              <small>Home</small>
+              <h1>Group1 Hotel</h1>
+            </div>
+            <button className="bg-[#079b31] flex flex-row p-3 px-4 items-center justify-between rounded-sm text-white">
+              <FaPlus color="white"/>
+              Create new Booking
+            </button>
           </div>
-          <button className="bg-[#079b31] flex flex-row p-3 px-4 items-center justify-between rounded-sm text-white">
-            <FaPlus color="white" />
-            Create new Booking
-          </button>
+          <div className="w-full h-[70%] py-3 flex flex-row justify-between">
+            {CardItems.map((item, index) => (
+                <Card key={index} icon={item.icon} title={item.title} value={item.value}/>
+            ))}
+          </div>
         </div>
-        <div className="w-full h-[70%] py-3 flex flex-row justify-between">
-          {CardItems.map((item, index) => (
-            <Card key={index} icon={item.icon} title={item.title} value={item.value} />
-          ))}
-        </div>
-      </div>
-      <div className="w-full h-[70%] flex flex-row items-center justify-between">
-        <div className="bg-white w-[48%] h-[100%]"></div>
-        <div className="w-[48%] h-[100%] flex flex-col justify-between">
-          <div className="bg-white h-[48%]"></div>
-          <div className="bg-white h-[48%]"></div>
+        <div className="w-full h-[70%] flex flex-row items-center justify-between">
+          <div className="bg-white w-[48%] h-[100%]"></div>
+          <div className="w-[48%] h-[100%] flex flex-col justify-between">
+            <div className="bg-white h-[48%]"></div>
+            <div className="bg-white h-[48%]"></div>
+          </div>
         </div>
       </div>
-    </div>
   )
 }
